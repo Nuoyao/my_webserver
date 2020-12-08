@@ -1,0 +1,48 @@
+
+<html>
+  <style> 
+    body{ 
+      font-size: 15pt; 
+      font-family: arial;
+    }
+  </style> 
+
+
+<body> 
+  <h1>Featured Stocks are shown below</h1> 
+  <div>
+    
+    <table>
+      <tr>
+        <th>Stock</th>
+        <th>Market Cap</th>
+        <th>Profile ID</th>
+        <th>Historical Data</th>
+        <th>Fundamental Information</th>
+      </tr>
+    
+      {% for n in range(mkt_cap|count) %}
+        <tr>
+          <td> {{stock_name[n]}} </td>
+          <td> {{mkt_cap[n]}} </td>
+          <td>  <p><a href="profile/{{profile[n]}}">{{profile[n]}}</a></p> </td>
+          <td>  <p><a href="historical/{{stock_name[n]}}">historical</a></p> </td>
+          <td>  <p><a href="fundamental/{{stock_name[n]}}">fundamental</a></p> </td>
+        </tr>  
+
+      {% endfor %}
+    </table>
+  </div>
+
+<p>       </p>   
+
+<div>Click the links above to discover the profile, historical trading data, and financial data of each stock. 
+     Click the link below to check some interesting analysis results. 
+</div>
+
+<p><a href="analysis">Go to the analysis toolkit!</a></p-->
+
+</body>
+
+
+</html>

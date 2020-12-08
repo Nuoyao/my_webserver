@@ -1,0 +1,56 @@
+
+<html>
+  <style> 
+    body{ 
+      font-size: 15pt; 
+      font-family: arial; 
+    }
+  </style> 
+
+<body> 
+  <h1>Profile information of profile_id</h1> 
+
+  <div>
+    <table>
+      <tr>
+        <th>Profile_ID</th>
+        <th>Sector</th>
+        <th>Address</th>
+        <th>number of employees</th>
+      </tr>
+    
+        <tr>
+          <td> {{data[0]}} </td>
+          <td> {{data[1]}} </td>
+          <td> {{data[2]}} </td>
+          <td> {{data[3]}} </td>
+        </tr>  
+    </table>
+
+  <h1>Key Executives</h1>
+  
+    <table>
+      <tr>
+        <th>title</th>
+        <th>names</th>
+        <th>payment</th>
+        <th>year born</th>
+      </tr>
+    
+      {% for n in range(title|count) %}
+        <tr>
+          <td> {{title[n]}} </td>
+          <td> {{name[n]}} </td>
+          <td> {{pay[n]}} </td>
+          <td> {{birth[n]}} </td>
+        </tr>  
+      {% endfor %}
+    </table>
+
+  </div>
+
+
+</body>
+
+
+</html>

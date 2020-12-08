@@ -1,0 +1,49 @@
+
+<html>
+  <style> 
+    body{ 
+      font-size: 15pt; 
+      font-family: arial; 
+    }
+  </style> 
+
+
+<body> 
+  <h1>Historical Data of Stock {{stock_ticker}}</h1> 
+
+  <div>
+    
+    <table>
+      <tr>
+        
+        <th> Date</th>
+        <th> Adjusted_Close</th>
+        <th> Open</th>
+        <th> Low</th>
+        <th> High</th>
+        <th> Volume</th>
+        <th> Close</th>
+
+      </tr>
+    
+      {% for n in range(date|count) %}
+        <tr>
+          <td> {{date[n]}} </td>
+          <td> {{adjusted_close[n]}} </td>
+          <td> {{open[n]}} </td>
+          <td> {{low[n]}} </td>
+          <td> {{high[n]}} </td>
+          <td> {{volume[n]}} </td>
+          <td> {{close[n]}} </td>
+        </tr>  
+
+      {% endfor %}
+    </table>
+  </div>
+
+<p><a href="..">Go back to select another stock!</a></p>
+
+</body>
+
+
+</html>

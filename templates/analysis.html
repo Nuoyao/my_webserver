@@ -1,0 +1,60 @@
+
+<html>
+  <style> 
+    body{ 
+      font-size: 15pt; 
+      font-family: arial;
+    }
+  </style> 
+
+
+<body> 
+  <h1>Conduct some analysis</h1> 
+  <div>
+    ANALYSIS 1. For each stock sector with more than one stock, we compute the sum of market cap of all the stocks with positive revunue and profit in this sector, 
+    and also their average profit margin. 
+
+    <table>
+      <tr>
+        <th>Sector  </th>
+        <th>Sum of Market Cap              </th>
+        <th>Average Profit Margin</th>
+      </tr>
+       
+        {% for n in range(sector|count) %}
+            <tr>
+            <td> {{sector[n]}} </td>
+            <td> {{cap[n]}} </td>
+            <td> {{pm[n]}}</td>
+            </tr>  
+        {% endfor %}
+    </table>
+
+    ANALYSIS 2. Return the maximum daily percentage increment of the each stock, and this day, in last October. 
+
+    <table>
+      <tr>
+        <th>Stock  </th>
+        <th>Date              </th>
+        <th>Maximum Daily Percentage Increment</th>
+      </tr>
+       
+        {% for n in range(stock|count) %}
+            <tr>
+            <td> {{stock[n]}} </td>
+            <td> {{date[n]}} </td>
+            <td> {{increment[n]}}% </td>
+            </tr>  
+        {% endfor %}
+    </table>
+
+
+  </div>
+
+<p>       </p>                  
+<p><a href="..">Go back to the home page.</a></p>
+
+</body>
+
+
+</html>

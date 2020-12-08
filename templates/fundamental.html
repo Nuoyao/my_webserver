@@ -1,0 +1,42 @@
+
+<html>
+  <style> 
+    body{ 
+      font-size: 15pt; 
+      font-family: arial; 
+    }
+  </style> 
+
+
+<body> 
+  <h1>Fundamental Information of Stock {{stock_ticker}} </h1> 
+
+  <div>
+    
+    <table>
+      <tr>
+
+        <th> Release Season</th>
+        <th> Revenue</th>
+        <th> Cost</th>
+        <th> Profit</th>
+      </tr>
+    
+      {% for n in range(Release_Season|count) %}
+        <tr>
+          <td> {{Release_Season[n]}} </td>
+          <td> {{Revenue[n]}} </td>
+          <td> {{Cost[n]}} </td>
+          <td> {{Profit[n]}} </td>
+        </tr>  
+
+      {% endfor %}
+    </table>
+  </div>
+
+<p><a href="..">Go back to select another stock!</a></p>
+
+</body>
+
+
+</html>
